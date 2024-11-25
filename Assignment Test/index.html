@@ -1,0 +1,48 @@
+<!--## Login Instructions
+To log in to the application, users will need to enter their credentials (username and password) in the login form. The application supports two types of users:
+For Manager :
+Username: manager , Password : manager 
+
+For Employee:
+Username :employee , Password : password 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <title>Company To-Do List Application</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Company To-Do List Application</h1>
+        </header>
+        <div id="login">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p id="error-message" class="error-message"></p>
+        </div>
+        <div id="content" style="display:none;">
+            <h2>Welcome, <span id="user-role"></span></h2>
+            <div id="todo-section">
+                <input type="text" id="new-task" placeholder="Add a new task" required>
+                <select id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button onclick="addTask()">Add Task</button>
+                <ul id="task-list"></ul>
+            </div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
